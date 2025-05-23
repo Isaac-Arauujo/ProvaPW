@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro de Voluntários</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cadastroVoluntario.html">Cadastro de Voluntário</a></li>
+            <li><a href="listaVoluntarios.html">Lista de Voluntários</a></li>
+            <li><a href="#" onclick="logout()">Sair</a></li>
+        </ul>
+    </nav>
+  <div class="container">
+    <h1>Cadastro de Voluntários</h1>
+    <form id="formCliente">
+      <input type="text" id="nome" placeholder="Nome completo" required />
+      <input type="email" id="email" placeholder="E-mail" required />
+      <input type="text" id="cep" placeholder="CEP" required />
+      <input type="text" id="endereco" placeholder="Endereço" disabled />
+      
+      <div class="foto-container">
+        <label>Foto do Voluntário:</label>
+        <div class="foto-preview">
+          <img id="fotoVoluntario" src="" alt="Pré-visualização da foto">
+        </div>
+        <button type="button" id="btnGerarFoto" class="btn-gerar-foto">Gerar Nova Foto</button>
+        <input type="hidden" id="fotoUrl" name="fotoUrl">
+      </div>
+      <div class="weather-info" id="weatherInfo" style="display: none;">
+        <h3>Clima na Localidade</h3>
+        <div id="weatherDisplay"></div>
+    </div>
+      <button type="submit">Cadastrar Voluntário</button>
+    </form>
+
+    <h2>Voluntários Cadastrados</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Foto</th>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>CEP</th>
+          <th>Endereço</th>
+        </tr>
+      </thead>
+      <tbody id="tabelaClientes"></tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

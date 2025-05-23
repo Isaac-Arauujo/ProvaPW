@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Voluntários</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cadastroVoluntario.html">Cadastro de Voluntário</a></li>
+            <li><a href="listaVoluntarios.html">Lista de Voluntários</a></li>
+            <li><a href="login.html">Sair</a></li>
+        </ul>
+    </nav>
+  <div class="container">
+    <h1>Lista de Voluntários</h1>
+    
+    <div class="controls">
+      <input type="text" id="filtroNome" placeholder="Filtrar por nome...">
+      <button id="btnLimparTudo" class="btn-danger">Limpar Todos</button>
+    </div>
+    
+    <div id="voluntariosContainer" class="cards-container"></div>
+  </div>
+
+  <script src="voluntarios.js"></script>
+</body>
+</html>
